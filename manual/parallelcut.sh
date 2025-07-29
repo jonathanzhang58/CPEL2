@@ -14,7 +14,7 @@
 WIDTH=${1:-250}  # Default to 250 if not provided
 
 module load conda_R
-cd /dcs07/afeinber/data/personal/jzhan/CPEL2/manual/1000genes || exit
+cd "/dcs07/afeinber/data/personal/jzhan/CPEL2/manual/${WIDTH}genes" || exit
 # Get current date in yy_mm_dd_hh_mm_ss format
 DATE=$(date +%y_%m_%d_%H_%M_%S)
 

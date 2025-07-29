@@ -143,7 +143,7 @@ dist_to_gene <- distanceToNearest(proms_tiled_3cgs_10x, genes_gr_symbol)
 # Keep only tiles that are within 5kb of a gene
 # queryHits gets indices of tiles that match the distance criteria
 # mcols(dist_to_gene)$distance gets the actual distances
-keep_idx <- queryHits(dist_to_gene)[subjectHits(dist_to_gene) & mcols(dist_to_gene)$distance <= 5000]
+keep_idx <- queryHits(dist_to_gene)[subjectHits(dist_to_gene) & mcols(dist_to_gene)$distance <= 1000]
 tiles_within_1kb <- proms_tiled_3cgs_10x[keep_idx]
 
 # You should check how many promoters are covered, how many kb are covered, 
@@ -160,6 +160,6 @@ length(proms_tiled_3cgs_10x)
 seqlevels(proms_tiled)
 seqlevels(cgs_in_all_groups)
 
-export.bed(proms_tiled, paste0("CPEL_regions_3CGs_Passing10xCovatLeast5Samps_", tile_width, "unfilteredbpTiledProms.bed"))
-export.bed(proms_tiled_3cgs_10x, paste0("CPEL_regions_3CGs_Passing10xCovatLeast5Samps_", tile_width, "filteredbpTiledProms.bed"))
+# export.bed(proms_tiled, paste0("CPEL_regions_3CGs_Passing10xCovatLeast5Samps_", tile_width, "unfilteredbpTiledProms.bed"))
+# export.bed(proms_tiled_3cgs_10x, paste0("CPEL_regions_3CGs_Passing10xCovatLeast5Samps_", tile_width, "filteredbpTiledProms.bed"))
 export.bed(tiles_within_1kb, paste0("CPEL_regions_3CGs_Passing10xCovatLeast5Samps_", tile_width, "genefilteredbpTiledProms_nearGenes.bed"))
