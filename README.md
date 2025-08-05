@@ -48,7 +48,6 @@ Replace text of file at
 With the Manifest.toml in the repository
 
 
-\
 Then run (in Julia): 
 
 ```
