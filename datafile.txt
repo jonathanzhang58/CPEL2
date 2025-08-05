@@ -1,0 +1,4 @@
+/dcs07/afeinber/data/personal/jzhan/CPEL2/BS.sorted_by_condition.RDS
+/dcs07/afeinber/data/personal/jzhan/scripts/GitHub/bams/old
+/dcs07/afeinber/data/personal/jzhan/scripts/GitHub/bams/young
+/dcs07/afeinber/data/personal/ocamacho/mm10_and_EM-Seq_control/mm10_gencode_M23_main_and_EM-Seq_controls.fa

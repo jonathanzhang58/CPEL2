@@ -1,0 +1,3 @@
+This is placeholder file to ensure git tracking
+
+Logfiles of main.sh and analysis_consolidated will appear here

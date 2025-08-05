@@ -5,12 +5,16 @@ using Distributed
 outdir = ARGS[1]
 chr = ARGS[2]
 indir = ARGS[3]
+fa = ARGS[4]
+bams1 = ARGS[5]
+bams2 = ARGS[6]
+
 println("Output directory: ", outdir)
 println("Chromosome: ", chr)
 println("Input directory: ", indir)
 
 # Genome file
-fa = "/dcs07/afeinber/data/personal/ocamacho/mm10_and_EM-Seq_control/mm10_gencode_M23_main_and_EM-Seq_controls.fa"
+fa = ARGS[4]
 
 # Give it the file containing your ROIs.
 bed = "$(indir)/chr/myROIS_chr$(chr).bed"
@@ -32,11 +36,12 @@ if !isdir(bam_dir)
     exit(1)
 end
 
-# Young
-bams2 = filter(f -> startswith(f, "Y-") && endswith(f, ".bam"), readdir(bam_dir))
-
 # Old
-bams1 = filter(f -> startswith(f, "O-") && endswith(f, ".bam"), readdir(bam_dir))
+bams1 = readdir(bam_dir)
+# Young 
+bams2 = readdir(bam_dir)
+
+
 
 if isempty(bams1) || isempty(bams2)
     println("ERROR: No BAM files found in directory")
