@@ -70,13 +70,20 @@ Edit `datafile.txt` with your data locations:
 /path/to/group2/bam/files
 /path/to/reference/genome.fa
 ```
-### 4. Set Working Directory
+### 4. Modify email
+Edit `main.sh` and `analyze_consolidated.sh` such that the line: 
+```
+#SBATCH --mail-user=your_email@jh.edu
+```
+Is replaced with you email, so that you will receive SLURM notifications on the status of the submitted jobs. 
+
+### 5. Set Working Directory
 Edit `datafile.txt` with your data locations:
 ```
 cd ./CPELPipeline
 ```
 
-### 5. Run Pipeline
+### 6. Run Pipeline
 ```bash
 # Basic analysis (promoters, 250bp tiles, p-value 0.1)
 sbatch main.sh

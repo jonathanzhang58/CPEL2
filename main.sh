@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --mail-user=jzhan367@jh.edu
+#SBATCH --mail-user=your_email@jh.edu
 #SBATCH --mail-type=FAIL,END
 #SBATCH --job-name=cpel_main_pipeline
 #SBATCH --chdir=.

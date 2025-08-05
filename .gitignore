@@ -6,9 +6,6 @@
 *.csv
 *.bed
 *.bedGraph
-/dcs07/afeinber/data/personal/jzhan/CPEL2/dep/output/
-/dcs07/afeinber/data/personal/jzhan/CPEL2/manual/
-/dcs07/afeinber/data/personal/jzhan/CPEL2/output/
 .RDataTmp
-/dcs07/afeinber/data/personal/jzhan/CPEL2/results
 *.png
+deprecated_files/
